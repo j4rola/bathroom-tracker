@@ -51,7 +51,7 @@ export default function Tracker({cleaning}) {
         <div class="opacity-50"> 
             <div className={styles.card}> 
                 <div className='d-flex justify-center'>
-                <h2>It's Andrew's turn next.</h2> 
+                <h2>It's Andrew&aposs turn next.</h2> 
                 </div>
             </div> 
         </div>
@@ -67,7 +67,7 @@ export default function Tracker({cleaning}) {
                 <div class="opacity-50"> 
                 <div className={styles.card}> 
                 <div className='d-flex justify-center'>
-                <h2>It's Joe's turn next.</h2> 
+                <h2>It's Joe&aposs turn next.</h2> 
                 </div>
                 </div> 
                 </div>
