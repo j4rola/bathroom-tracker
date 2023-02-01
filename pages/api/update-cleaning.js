@@ -4,8 +4,9 @@ import { PrismaClient } from "@prisma/client"
 const prisma = new PrismaClient();
 
 export default async function handler(req, res) { 
+
   try {
-    res.status(200).json({test: 'test'})
+    
     console.log(req.body); 
     console.log(req.body.timer);  
     const cleaningData = req.body;  
@@ -21,6 +22,8 @@ export default async function handler(req, res) {
     },
     
   })
+
+  res.status(200).json({test: 'test'})
   
   } catch (error) {
     console.log(error)
