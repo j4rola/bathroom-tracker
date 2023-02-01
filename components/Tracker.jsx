@@ -24,7 +24,7 @@ export default function Tracker({cleaning}) {
 
     //getElapsedTime()
     
-    const toggleCleaned = async () => {
+    const toggleCleaned = async () => {   
         
         if (bathStatus === 'Joe'){   
             
