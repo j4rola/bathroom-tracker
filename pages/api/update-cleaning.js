@@ -6,6 +6,7 @@ const prisma = new PrismaClient();
 export default async function handler(req, res) { 
   res.status(200).json({ name: 'John Doe' }) 
   console.log(req.body)
+  console.log(req.body.timer)
   const cleaningData = req.body;
   const savedCleaning = await prisma.cleaning.update({ 
     where: {
