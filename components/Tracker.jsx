@@ -25,16 +25,16 @@ export default function Tracker({cleaning}) {
     //getElapsedTime()
     
     const toggleCleaned = () => {
-        if (bathStatus === 'Joe'){ 
+        if (bathStatus === 'Joe'){   
             
             updateStatus('Andrew') 
-            axios.post('https://bathroom-tracker-3000.vercel.app/api/update-cleaning', {cleanedBy: 'Andrew', cleanedDate: cleanedDate, timer: Date.now().toString()}) 
+            axios.post('/api/update-cleaning', {cleanedBy: 'Andrew', cleanedDate: cleanedDate, timer: Date.now().toString()}) 
 
         } 
             
             else {
             updateStatus('Joe')
-            axios.post('https://bathroom-tracker-3000.vercel.app/api/update-cleaning', {cleanedBy: 'Joe', cleanedDate: cleanedDate, timer: Date.now().toString()}) 
+            axios.post('/api/update-cleaning', {cleanedBy: 'Joe', cleanedDate: cleanedDate, timer: Date.now().toString()}) 
         }}
     
     return(
