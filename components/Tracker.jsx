@@ -28,13 +28,13 @@ export default function Tracker({cleaning}) {
         if (bathStatus === 'Joe'){ 
             
             updateStatus('Andrew') 
-            axios.post('api/update-cleaning', {cleanedBy: 'Andrew', cleanedDate: cleanedDate, timer: Date.now().toString()}) 
+            axios.post('https://bathroom-tracker-3000.vercel.app/api/update-cleaning', {cleanedBy: 'Andrew', cleanedDate: cleanedDate, timer: Date.now().toString()}) 
 
         } 
             
             else {
             updateStatus('Joe')
-            axios.post('api/update-cleaning', {cleanedBy: 'Joe', cleanedDate: cleanedDate, timer: Date.now().toString()}) 
+            axios.post('https://bathroom-tracker-3000.vercel.app/api/update-cleaning', {cleanedBy: 'Joe', cleanedDate: cleanedDate, timer: Date.now().toString()}) 
         }}
     
     return(
