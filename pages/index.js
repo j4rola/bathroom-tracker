@@ -22,7 +22,7 @@ export default function Home({cleaning}) {
         <h1 className={styles.title}>
           Bathroom Tracker 3.0
         </h1>
-        <Tracker cleaning={cleaning}></Tracker>
+        <Tracker className='mt-3' cleaning={cleaning}></Tracker>
       </main>
 
       
