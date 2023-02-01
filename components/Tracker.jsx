@@ -29,14 +29,14 @@ export default function Tracker({cleaning}) {
         if (bathStatus === 'Joe'){   
             
             updateStatus('Andrew') 
-            await axios.post('/api/update-cleaning', {cleanedBy: 'Andrew', cleanedDate: cleanedDate, timer: Date.now().toString()})
+            await axios.post('https://bathroom-tracker.vercel.app/api/update-cleaning', {cleanedBy: 'Andrew', cleanedDate: cleanedDate, timer: Date.now().toString()})
             console.log('working') 
 
         } 
             
             else {
             updateStatus('Joe')
-            await axios.post('/api/update-cleaning', {cleanedBy: 'Joe', cleanedDate: cleanedDate, timer: Date.now().toString()}) 
+            await axios.post('https://bathroom-tracker.vercel.app/api/update-cleaning', {cleanedBy: 'Joe', cleanedDate: cleanedDate, timer: Date.now().toString()}) 
             console.log('working') 
         }}
     

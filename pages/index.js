@@ -1,13 +1,11 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Head from 'next/head'
-import Image from 'next/image'
 import Tracker from '../components/Tracker'
 import styles from '../styles/Home.module.css'
 
 import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient(); 
-
 
 export default function Home({cleaning}) {
   console.log(Date.now())
