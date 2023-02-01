@@ -10,15 +10,17 @@ export default async function handler(req, res) {
     console.log(req.body.timer)
     const cleaningData = req.body;
     const savedCleaning = await prisma.cleaning.update({ 
-    where: {
+    where: { 
       id: '63d9fb0f5c89217464c97bc1',
-    },
+    },  
     data: {
       cleanedBy: req.body.cleanedBy,
       cleanedDate: req.body.cleanedDate,
       timer: req.body.timer
     },
+    
   })
+  return savedCleaning
   } catch (error) {
     console.log(error)
   }

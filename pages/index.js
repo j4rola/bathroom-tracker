@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Head from 'next/head'
-import Tracker from '../components/Tracker'
-import styles from '../styles/Home.module.css'
+import Tracker from '../components/Tracker';
+import styles from '../styles/Home.module.css';
 
 import { PrismaClient } from '@prisma/client';
 
