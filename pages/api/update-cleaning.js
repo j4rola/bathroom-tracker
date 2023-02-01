@@ -5,9 +5,9 @@ const prisma = new PrismaClient();
 
 export default async function handler(req, res) { 
   try {
-    res.status(200).json({ name: 'John Doe' }) 
-    console.log(req.body)
-    console.log(req.body.timer)
+    
+    console.log(req.body); 
+    console.log(req.body.timer);
     const cleaningData = req.body;
     console.log(cleaningData)
     const savedCleaning = await prisma.cleaning.update({ 
@@ -21,7 +21,7 @@ export default async function handler(req, res) {
     },
     
   })
-  return savedCleaning
+  res.status(200).json(data) 
   } catch (error) {
     console.log(error)
   }
