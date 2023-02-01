@@ -40,7 +40,7 @@ export default function Tracker({cleaning}) {
     return(
     <> {bathStatus === 'Joe'?
         <div className={styles.container}> 
-        <div className={styles.card} fade> 
+        <div className={styles.card} > 
             <div className='d-flex flex-column '> 
             <h2>Joe cleaned the bathroom on {cleaning.cleanedDate}</h2> 
             <h3>{elapsedTime} days since last cleaning.</h3>
@@ -48,7 +48,7 @@ export default function Tracker({cleaning}) {
             </div>
         </div> 
 
-        <div class="opacity-50"> 
+        <div className="opacity-50"> 
             <div className={styles.card}> 
                 <div className='d-flex justify-center'>
                 <h2>It&aposs Andrew&aposs turn next.</h2> 
@@ -57,20 +57,20 @@ export default function Tracker({cleaning}) {
         </div>
         </div> :
             <div className={styles.container}> 
-                <div className={styles.card} fade> 
+                <div className={styles.card}> 
                     <div className='d-flex flex-column '>
                     <h2>Andrew Cleaned the bathroom on {date.getMonth() + 1} / {date.getDate()}.</h2> 
                     <h3>{elapsedTime} days since last cleaning.</h3>   
                     <Button className='mt-2' variant='success' onClick={toggleCleaned}>Mark cleaned</Button> 
                     </div> 
                 </div> 
-                <div class="opacity-50"> 
+                <div className="opacity-50"> 
                 <div className={styles.card}> 
                 <div className='d-flex justify-center'>
                 <h2>It&aposs Joe&aposs turn next.</h2> 
                 </div>
                 </div> 
-                </div>
+                </div>  
                 
             </div>}
     </>
