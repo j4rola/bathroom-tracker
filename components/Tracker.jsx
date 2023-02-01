@@ -25,16 +25,19 @@ export default function Tracker({cleaning}) {
     //getElapsedTime()
     
     const toggleCleaned = () => {
+        
         if (bathStatus === 'Joe'){   
             
             updateStatus('Andrew') 
-            axios.post('/api/update-cleaning', {cleanedBy: 'Andrew', cleanedDate: cleanedDate, timer: Date.now().toString()}) 
+            axios.post('/api/update-cleaning', {cleanedBy: 'Andrew', cleanedDate: cleanedDate, timer: Date.now().toString()})
+            console.log('working') 
 
         } 
             
             else {
             updateStatus('Joe')
             axios.post('/api/update-cleaning', {cleanedBy: 'Joe', cleanedDate: cleanedDate, timer: Date.now().toString()}) 
+            console.log('working') 
         }}
     
     return(
