@@ -4,11 +4,12 @@ import { PrismaClient } from "@prisma/client"
 const prisma = new PrismaClient();
 
 export default async function handler(req, res) { 
-  res.status(200).json({ name: 'John Doe' }) 
-  console.log(req.body)
-  console.log(req.body.timer)
-  const cleaningData = req.body;
-  const savedCleaning = await prisma.cleaning.update({ 
+  try {
+    res.status(200).json({ name: 'John Doe' }) 
+    console.log(req.body)
+    console.log(req.body.timer)
+    const cleaningData = req.body;
+    const savedCleaning = await prisma.cleaning.update({ 
     where: {
       id: '63d9fb0f5c89217464c97bc1',
     },
@@ -18,4 +19,8 @@ export default async function handler(req, res) {
       timer: req.body.timer
     },
   })
+  } catch (error) {
+    console.log(error)
+  }
+  
 }
