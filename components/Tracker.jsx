@@ -29,14 +29,14 @@ export default function Tracker({cleaning}) {
         if (bathStatus === 'Joe'){   
             
             updateStatus('Andrew') 
-            await axios.post('https://bathroom-tracker.vercel.app/api/update-cleaning', {cleanedBy: 'Andrew', cleanedDate: cleanedDate, timer: Date.now().toString()})
+            await axios.post('/api/update-cleaning', {cleanedBy: 'Andrew', cleanedDate: cleanedDate, timer: Date.now().toString()})
             console.log('working') 
 
         } 
             
             else {
             updateStatus('Joe')
-            await axios.post('https://bathroom-tracker.vercel.app/api/update-cleaning', {cleanedBy: 'Joe', cleanedDate: cleanedDate, timer: Date.now().toString()}) 
+            await axios.post('/api/update-cleaning', {cleanedBy: 'Joe', cleanedDate: cleanedDate, timer: Date.now().toString()}) 
             console.log('working') 
         }}
     
@@ -54,7 +54,7 @@ export default function Tracker({cleaning}) {
         <div className="opacity-50"> 
             <div className={styles.card}> 
                 <div className='d-flex justify-center'>
-                <h2>It&aposs Andrew&aposs turn next.</h2> 
+                <h2>It&apos;s Andrew&apos;s turn next.</h2> 
                 </div>
             </div> 
         </div>
@@ -70,7 +70,7 @@ export default function Tracker({cleaning}) {
                 <div className="opacity-50"> 
                 <div className={styles.card}> 
                 <div className='d-flex justify-center'>
-                <h2>It&aposs Joe&aposs turn next.</h2> 
+                <h2>It&apos;s Joe&apos;s turn next.</h2> 
                 </div>
                 </div> 
                 </div>  
