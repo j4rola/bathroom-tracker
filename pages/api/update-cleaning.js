@@ -9,7 +9,7 @@ export default async function handler(req, res) {
   const cleaningData = req.body;
   const savedCleaning = await prisma.cleaning.update({ 
     where: {
-      id: 'cldkvz5lv0000licl396q765e',
+      id: '63d9fb0f5c89217464c97bc1',
     },
     data: {
       cleanedBy: req.body.cleanedBy,

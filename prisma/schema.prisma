@@ -3,16 +3,17 @@
 
 generator client {
   provider = "prisma-client-js"
+  previewFeatures = ["mongodb"]
 }
 
 datasource db {
-  provider = "sqlite"
-  url      = "file:./dev.db"
+  provider = "mongodb"
+  url      = env("MONGO_URI")
 }
 
 model Cleaning {
-  id String @id @default(cuid())
-  cleanedBy String
-  cleanedDate String
-  timer String
+  id String @id @default(dbgenerated()) @map("_id") @db.ObjectId
+  cleanedBy String 
+  cleanedDate String 
+  timer String 
 }
