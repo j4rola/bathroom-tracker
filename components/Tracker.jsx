@@ -7,7 +7,7 @@ export default function Tracker({cleaning}) {
 
     const [bathStatus, updateStatus] = useState(cleaning.cleanedBy)
     
-
+    console.log(cleaning.timer)
     const date = new Date
     const cleanedDate = `${date.getMonth() + 1} / ${date.getDate()}`
 
