@@ -18,15 +18,15 @@ export default function Home({cleaning}) {
         <link rel="icon" href="/favicon.ico" /> 
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Bathroom Tracker 3.0
+      <main className={styles.main}>  
+        <h1 className={styles.title}>  
+          Bathroom Tracker 3.0  
         </h1>
-        <Tracker className='mt-3' cleaning={cleaning}></Tracker>
-      </main>
+        <Tracker className='mt-3' cleaning={cleaning}></Tracker>  
+      </main>  
 
       
-    </div>
+    </div>  
   )
 }
 
